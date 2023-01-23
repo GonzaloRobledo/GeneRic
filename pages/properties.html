@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/bb2dada181.js" crossorigin="anonymous"></script>
+    <!--My Styles-->
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <title>GeneRic - Properties</title>
+</head>
+
+<body>
+    <header class="header-index">
+        <section class="section-nav-logo">
+            <a href="../index.html">
+                <h1>GeneRic</h1>
+            </a>
+            <i class="fa-solid fa-bars btn-nav"></i>
+        </section>
+        <nav id="navegation">
+            <ul>
+                <li><a href="#">Propiedades</a></li>
+                <li><a href="./barrios.html">Barrios</a></li>
+                <li><a href="#" id="is-part">Forma Parte</a></li>
+                <li><a href="../index.html#section-contact-form">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-properties">
+        <section class="conteiner-92 filter-search"><!--Filter Properties-->
+            <div>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="¿Donde queres vivir?" id="input-location">
+            </div>
+        </section>
+        <section class="section-selection conteiner-92"><!--List properties-->
+            <article class="filter-properties">
+                <div class="list-order">
+                    <p>Order for...</p>
+                    <i class="fa-solid fa-arrow-up-z-a"></i>
+                </div>
+                <ul id="list-order">
+                    <li class="list-order"><i class="fa-solid fa-circle-xmark"></i></li>
+                    <li data-order="max">Max price</li>
+                    <li data-order="min">Min price</li>
+                    <li data-order="prominent">More to less prominent</li>
+                    <li data-order="remove">Remove Order</li>
+                </ul>
+                <div class="list-filter">
+                    <p>Filtros</p>
+                    <i class="fa-solid fa-eye"></i>
+                </div>
+                <ul id="list-filter">
+                    <li class="list-filter"><i class="fa-solid fa-circle-xmark"></i></li>
+                    <li data-filter="economic">Economicos</li>
+                    <li data-filter="featured">Recomendados</li>
+                    <li data-filter="rent">Alquiler</li>
+                    <li data-filter="buy">Venta</li>
+                    <li data-filter="remove">Remove Filter</li>
+                </ul>
+            </article>
+            <ul id="list-selection"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gonzalo Robledo &copy; 2023</p>
+    </footer>
+
+    <script src="../script/properties/main_properties.js" type="module"></script>
+</body>
+
+</html>

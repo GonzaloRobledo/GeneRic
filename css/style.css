@@ -1,0 +1,737 @@
+/**-------------------------------GENERAL------------------------------**/
+/**------------------------------------------------------------------**/
+
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    position:relative;
+    padding-bottom:50px;
+    min-height: 100vh;
+}
+.conteiner-92{
+    max-width: 92%;
+    margin:0 auto;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+h1{
+    margin:0;
+}
+button,a,i{
+    cursor: pointer;
+    transition:all 0.1s ease;
+}
+.form-send{
+    position:fixed;
+    background-color: rgba(0,0,0,0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    z-index:5000;
+    padding:20px;
+}
+.form-send div{
+    background-color: white;
+    height: 40vh;
+    color:black;
+    padding:20px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+}
+.form-send div i{
+    color:green;
+    font-size:60px;
+}
+.form-send div p{
+    font-size:17px;
+    line-height: 1.4;
+    font-weight: bold;
+    font-style: italic;
+}
+.form-send div button{
+    background-color: rebeccapurple;
+    padding:10px 40px;
+    border:none;
+    color:white;
+    font-weight: bold;
+    font-size:17px;
+    text-transform: uppercase;
+}
+/**JS**/
+.visible{
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.translate-0{
+    transform: translate(0,0) !important;
+}
+.confirm,.not-confirm{
+    background-color: green;
+    text-align: center;
+    padding:8px;
+    font-weight: bold;
+    font-style: italic;
+    font-size:16px;
+    color:white;
+}
+.not-confirm{
+    background-color: rgb(198, 0, 0);
+}
+.disabled{
+    background-color: grey !important;
+}
+.selected-type-header{
+    background-color: white !important;
+    color:black !important;
+    border:none !important; 
+}
+.selected-type-main{
+    background-color: rgb(198, 0, 0) !important;
+    color:white !important;
+}
+.none{
+    display: none !important;
+}
+/**-------------------------------HEADER-------------------------------**/
+/**------------------------------------------------------------------**/
+
+.section-nav-logo{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:20px;
+    background-color: black;
+    color:white;
+    font-size:25px;
+    position:fixed;
+    top:0;
+    width: 100%;
+    z-index:5000;
+    flex-wrap: wrap;
+}
+.section-nav-logo a{
+    color:white;
+}
+.section-nav-logo h1{
+    font-size:25px;
+}
+.section-search-header{
+    height: 87vh;
+    background-color: black;
+}
+.bckg-img-header{
+    background-color: red;
+    height: 40vh;
+}
+.bckg-img-header img{
+    height: 100%;
+    width: 100%;
+}
+.type-header{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.type-header button{
+    flex-basis: calc(50% - 5px);
+    padding:12px;
+    border:none;
+    background-color: rgb(57, 57, 57);
+    color:white;
+}
+#search-form input{
+    display:block;
+    width:100%;
+    font-size:14px;
+    padding:18px;
+    margin:10px 0;
+}
+#search-form input:last-child{
+    background-color: rgb(198, 0, 0);
+    color:white;
+    border:none;
+}
+.form-buttons{
+    position:relative;
+    top:-10px;
+}
+
+#navegation{
+    height: 100vh;
+    background-color: black;
+    padding-top:70px;
+    position:fixed;
+    top:0;
+    height: 100vh;
+    width: 100vw;
+    z-index:4000;
+    transform: translate(-2000px,0);
+    transition: all 0.4s ease;
+}
+#navegation ul{
+    text-align: center;
+}
+#navegation ul li a{
+    display:block;
+    padding:20px 0;
+    font-weight: bold;
+    border-bottom:1px solid grey;
+    color:white;
+}
+/**-------------------------------MAIN-------------------------------**/
+/**------------------------------------------------------------------**/
+.section-selection{
+    margin-top:30px;
+}
+.section-selection h2{
+    text-align: center;
+    font-weight: 400;
+    margin-bottom:50px;
+}
+.description-selection{
+    text-align: center;
+    margin-bottom:40px;
+    line-height: 1.4;
+    font-size:15px;
+}
+.buttons-selection{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+.buttons-selection button{
+    flex-basis: calc(50% - 5px);
+    padding:12px;
+    border:none;
+    border:2px solid rgb(198, 0, 0);
+    background-color: white;
+}
+#list-selection{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+    gap:20px;
+}
+#list-selection li{
+    background-color: rgb(230, 230, 230);
+    height: 400px;
+    margin-bottom:40px;
+}
+#list-selection button{
+    display:block;
+    background-color: rgb(198, 0, 0);
+    padding:10px;
+    color:white;
+    font-size:17px;
+    font-weight: bold;
+    border:none;
+    flex-basis:100%;
+    margin-top:20px;
+}
+.img-selection{
+    height: 65%;
+    position:relative;
+}
+.img-selection img{
+    height: 100%;
+    width: 100%;
+}
+.in-selection{
+    position:absolute;
+    z-index:2000;
+    top:0;
+    right: 0;
+    margin:10px 15px 0 0;
+    color:white;
+    background-color: rgb(198, 0, 0);
+    padding:7px 40px;
+    border-radius:100px;
+    font-weight: bold;
+}
+.in-selection::first-letter{
+    text-transform: uppercase;
+}
+.arrows-selection{
+    position:absolute;
+    top:0;
+    color:white;
+    width: 100%;
+    height: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:0 30px;
+    font-size:20px;
+}
+.site-selection{
+    position:absolute;
+    z-index:2000;
+    bottom:0;
+    margin:0 0 10px 15px;
+    color:white;
+    font-size:15px;
+}
+
+.price-selection{
+    height: 30%;
+    display:flex;
+    padding:10px;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    flex-wrap: wrap;
+}
+.price-selection p{
+    flex-basis:50%;
+    margin-top:15px;
+}
+.price-selection p:first-child{
+    color:green;
+    font-size:17px;
+    font-weight: bold;
+}
+
+.price-selection p span{
+    display:block;
+    margin-bottom:5px;
+}
+
+.section-selection a{
+    display:block;
+    text-align: center;
+    width:90%;
+    padding:10px 0;
+    margin:0 auto;
+    margin-top:40px;
+    border:2px solid black;
+    font-weight: bold;
+}
+
+.section-barrios{
+    background-color: rgb(230, 230, 230);
+    padding:40px 0;
+    max-width: 100vw !important;
+}
+#list-barrios{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+}
+#list-barrios li{
+    height: 300px;
+    position:relative;
+    z-index:2000;
+}
+#list-barrios li img{
+    height: 100%;
+    width: 100%;
+}
+#list-barrios li p{
+    position:absolute;
+    top:0;
+    padding:20px;
+    font-size:25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    color:white;
+    background-color: rgba(0,0,0,0.5);
+    z-index:3000;
+    height: 100%;
+    width: 100%;
+}
+
+.section-team-work{
+    background-image: url(../images/work-team-modified.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    color:white;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding:15px;
+    margin-bottom:50px;
+}
+.section-team-work h2{
+    margin-bottom:20px;
+    font-size:22px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+.section-team-work a{
+    display:block;
+    width: 100%;
+    padding:12px;
+    background-color: rgb(198, 0, 0);
+    color:white;
+    font-weight: bold;
+    font-size:16px;
+}
+
+#contact-form input,#contact-form textarea,#contact-form select{
+    display:block;
+    width:100%;
+    padding:10px;
+    border:none;
+    outline:none;
+    border-bottom:2px solid black;
+    font-size:17px;
+    margin-top:35px;
+}
+#contact-form select{
+    background-color: rgb(200, 200, 200);
+    border:none;
+    
+}
+#contact-form label{
+    display:block;
+    margin:50px 0 20px 0;
+    font-size:17px;
+}
+#contact-form textarea{
+    resize: none;
+    height: 150px;
+    border:2px solid black;
+}
+#contact-form input:last-child{
+    border:none;
+    background-color: rgb(198, 0, 0);
+    color:white;
+    font-size:17px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom:35px
+}
+
+.form-cv{
+    position:fixed;
+    z-index:10000;
+    background-color: rgba(0,0,0,0.7);
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    padding:20px;
+}
+.form-cv form{
+    color:black;
+    padding:20px;
+    background-color: white;
+    border-radius:20px;
+    width:100%;
+}
+.form-cv form label{
+    display:block;
+    border:2px dashed black;
+    padding:100px 0;
+    margin-top:30px;
+    font-size:17px;
+    font-weight: bold;
+}
+.form-cv form label span{
+    color:green;
+    display:block;
+}
+.form-cv form i{
+    color:rgb(198, 0, 0);
+    font-size:25px;
+}
+
+.form-cv button{
+    display: block;
+    margin:0 auto;
+    background-color: rgb(91, 0, 201);
+    margin-top:20px;
+    padding:10px 40px;
+    border:none;
+    color:white;
+    font-size:16px;
+    font-weight: bold;
+}
+
+.drag-over{
+    background-color: green;
+    color:white;
+}
+
+.drop{
+    background-color: rgb(223, 223, 89);
+}
+
+/**-------------------------------FOOTER-------------------------------**/
+/**------------------------------------------------------------------**/
+footer{
+    background-color: black;
+    text-align: center;
+    font-size:17px;
+    font-weight: bold;
+    color:white;
+    padding:20px 10px;
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+
+
+/**-------------------------------PAGE PROPERTIES-------------------------------**/
+/**------------------------------------------------------------------**/
+
+.main-properties{
+    padding-top:100px;
+}
+
+.filter-search div{
+    display:flex;
+    align-items: center;
+    border:2px solid black;
+    flex-basis:calc(50% - 2px);
+    padding:0 5px;
+}
+.filter-search div input{
+    display:block;
+    padding:10px;
+    border:none;
+    outline:none;
+    font-size:15px;
+}
+
+.filter-properties{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:30px;
+}
+.filter-properties div{
+    padding:10px;
+    flex-basis:calc(50% - 2px);
+    border:2px solid black;
+    display:flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.filter-properties div i{
+    font-size:22px;
+}
+
+#list-order,#list-filter{
+    background-color: white;
+    position:fixed;
+    top:0;
+    right: 0;
+    z-index:5000;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    opacity: 0;
+    transition:all 0.4s ease;
+}
+.list-order p::first-letter,.list-filter p::first-letter{
+    text-transform: uppercase;
+}
+#list-order li,#list-filter li{
+    display:block;
+    text-align: center;
+    padding:20px;
+    border-bottom:2px solid black;
+    font-size:17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#list-order li:first-child, #list-filter li:first-child{
+    font-size:30px;
+    color: rgb(198, 0, 0);
+}
+
+.info-property{
+    position:fixed;
+    top:0;
+    width: 100vw;
+    height: 100vh;
+    left:0;
+    z-index:5000;
+    background-color: rgba(0,0,0,0.9);
+    padding:20px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.info-property div{
+    background-color: white;
+    padding:20px;
+    height: 95vh;
+    overflow-y: scroll;
+    position: relative;
+}
+.info-property div img{
+    width: 100%;
+    height: 50%;
+}
+.info-property div p{
+    margin:20px 0;
+    font-style: italic;
+    line-height: 1.5;
+}
+.info-property div p span{
+    font-size:17px;
+    font-weight: bold;
+    color:rgb(91, 0, 201);
+    font-style: normal;
+}
+.info-property div button{
+    display:block;
+    background-color: rgb(91, 0, 201);
+    width: 100%;
+    padding:10px;
+    color:white;
+    font-weight: bold;
+    border:none;
+    font-size:17px;
+}
+.info-property div i{
+    color: rgb(198, 0, 0);
+    position:absolute;
+    top:0;
+    right: 0;
+    font-size:30px;
+    background-color: white;
+    border-radius: 100%;
+    margin:10px 10px 0 0;
+}
+
+/**-------------------------------PAGE BARRIOS-------------------------------**/
+/**------------------------------------------------------------------**/
+
+.main-barrios h2{
+    margin:30px 0;
+}
+.main-barrios #list-barrios li{
+    height: 400px;
+}
+#list-barrios li span{
+    display:block;
+    position:absolute;
+    background-color: rgba(0,0,0,0.7);
+    top:0;
+    width: 100%;
+    height: 100%;
+    overflow:scroll;
+    z-index:15000;
+    color:white;
+    display: flex;
+    padding:15px;
+    line-height: 1.25;
+}
+
+@media (min-width: 600px){
+    .section-search-header{
+        padding:0 100px;
+        height: 80vh;
+    }
+    .section-team-work a{
+        width:50%;
+        margin:0 auto;
+    }
+    .form-cv form{
+        width:70%;
+    }
+}
+@media (min-width: 800px){
+    .section-selection:first-child{
+        max-width: 80%;
+    }
+    .section-selection a{
+       width:50%;
+    }
+    .section-barrios a{
+       width:40%;
+    }
+    .section-selection h2{
+        font-size:40px;
+    }
+    .section-selection p:first-of-type{
+        font-size:20px;
+    }
+    button{
+        font-size:20px;
+    }
+    a{
+        font-size:17px;
+    }
+    .section-team-work a{
+        width:30%;
+        margin:0 auto;
+        font-size:25px;
+    }
+    #contact-form{
+        max-width: 50%;
+    }
+    .bckg-img-header{
+        height: 50vh;
+    }
+    .section-search-header{
+        height: 90vh;
+    }
+    #navegation ul li a{
+        font-size:25px;
+        padding:40px;
+    }
+    #search-form input{
+        font-size:20px;
+    }
+    .form-cv form label{
+        font-size:25px;
+        padding:150px 0;
+    }
+}
+@media (min-width: 1000px){
+    .section-selection:first-child{
+        max-width: 60%;
+    }
+    #list-barrios{
+        padding:0 50px;
+    }
+    .section-selection a{
+        width:40%;
+     }
+     .section-barrios a{
+        width:20%;
+     }
+     .section-search-header{
+        padding:0 250px;
+    }
+    .section-nav-logo{
+        font-size:35px;
+    }
+    .section-nav-logo h1{
+        font-size:35px;
+    }
+    #contact-form{
+        max-width: 35%;
+    }
+    .form-cv form{
+        width:50%;
+    }
+}

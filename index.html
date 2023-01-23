@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Font Awesome-->
+    <script src="https://kit.fontawesome.com/bb2dada181.js" crossorigin="anonymous"></script>
+    <!--My Styles-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>GeneRic</title>
+</head>
+
+<body>
+    <header class="header-index">
+        <section class="section-nav-logo">
+            <a href="#">
+                <h1>GeneRic</h1>
+            </a>
+            <i class="fa-solid fa-bars btn-nav"></i>
+        </section>
+        <nav id="navegation">
+            <ul>
+                <li><a href="pages/properties.html">Propiedades</a></li>
+                <li><a href="pages/barrios.html">Barrios</a></li>
+                <li><a href="#section-team-work" class="isPart">Forma Parte</a></li>
+                <li><a href="#section-contact-form" class="toContact">Contacto</a></li>
+            </ul>
+        </nav>
+        <section class="section-search-header">
+            <div class="bckg-img-header">
+                <img src="https://k44.kn3.net/taringa/1/6/6/6/6/8/72/omartiz95/EB6.jpg?7388">
+            </div>
+            <div class="form-buttons">
+                <div class="type-header conteiner-92">
+                    <button class="selected-type-header" data-typeheader="buy">Venta</button>
+                    <button data-typeheader="rent">Alquiler</button>
+                </div>
+                <form id="search-form" class="conteiner-92">
+                    <input type="text" placeholder="Buscar por Localidad, Barrio o Calle" name="search">
+                    <input type="submit" value="Buscar">
+                </form>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section class="section-selection conteiner-92"><!--Section selection geneRic-->
+            <h2>Selection GeneRic</h2>
+            <p class="description-selection">Conocé las propiedades más destacadas del mercado. La mejor y más exclusiva
+                selección de propiedades en
+                venta y alquiler.</p>
+            <div class="buttons-selection">
+                <button class="selected-type-main" data-typemain="buy">Venta</button>
+                <button data-typemain="rent">Alquiler</button>
+            </div>
+            <ul id="list-selection"></ul>
+
+            <a href="pages/properties.html">Descubrir mas Propiedades</a>
+        </section>
+
+        <section class="section-selection section-barrios"><!--Section Guia de Barrios-->
+            <h2>Guia de Barrios</h2>
+
+            <ul id="list-barrios">
+            </ul>
+
+            <a href="pages/barrios.html">Explorar mas Barrios</a>
+        </section>
+
+        <section class="section-team-work" id="section-team-work"><!--Section Team Work-->
+            <h2>¡Vos tambien podes ser parte de nuestro equipo!</h2>
+            <a href="#section-team-work" id="is-part">Sumate</a>
+        </section>
+
+        <section class="section-selection section-contact-form" id="section-contact-form"><!--Section contact form-->
+            <h2>Estamos para ayudarte</h2>
+            <form id="contact-form" class="conteiner-92">
+                <input type="text" placeholder="Name and Surname*" name="name"
+                    data-pattern="^[A-Záéíóú]+(\s[A-Záéíóú]+)*$" data-msg="Solo letras de A-Z" required>
+
+                <input type="email" placeholder="Email*" name="email"
+                    data-pattern="^[0-9A-Záéíóú._-]+\@(hotmail|outlook|gmail)\.(com|com\.ar)$"
+                    data-msg="Example: gonza_roble99@hotmail.com" required>
+
+                <input type="text" placeholder="Telephone" name="tel">
+
+                <select>
+                    <option>Elija el motivo de su consulta</option>
+                    <option>Tasacion</option>
+                    <option>Busqueda</option>
+                    <option>Informacion y Novedades</option>
+                </select>
+
+                <label for="message">Message</label>
+                <textarea id="message" placeholder="Escriba su mensaje por favor" required></textarea>
+
+                <input type="submit" name="send" value="Send" id="send-contact-form" disabled="disabled"
+                    class="disabled">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Gonzalo Robledo &copy; 2023</p>
+    </footer>
+
+    <script src="script/main.js" type="module"></script>
+</body>
+
+</html>
